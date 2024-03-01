@@ -44,7 +44,7 @@ pub struct Make<'info> {
 }
 
 impl<'info> Make<'info> {
-    pub fn make(&mut self, amount: u64, seed: u64, bumps: &MakeBumps) -> Result<()> {
+    pub fn make(&mut self, seed: u64, amount: u64, bumps: &MakeBumps) -> Result<()> {
         self.escrow.set_inner( Escrow {
             seed,
             mint_x: self.mint_x.to_account_info().key(),
